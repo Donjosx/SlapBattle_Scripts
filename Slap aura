@@ -33,7 +33,8 @@ local Range = 20
 local Range2 = math.huge
 
 SlapButton.MouseButton1Click:Connect(function()
-local gloveHits = {
+
+gloveHits = {
     ["Default"] = game.ReplicatedStorage.b,
     ["Extended"] = game.ReplicatedStorage.b,
     -----------// Glove Hit General Or New Glove \\-----------
@@ -55,7 +56,7 @@ local gloveHits = {
     ["Snowball"] = game.ReplicatedStorage.GeneralHit,
     ["fish"] = game.ReplicatedStorage.GeneralHit,
     ["Killerfish"] = game.ReplicatedStorage.GeneralHit,
-    [""] = game.ReplicatedStorage.GeneralHit,
+    ["🗿"] = game.ReplicatedStorage.GeneralHit,
     ["Obby"] = game.ReplicatedStorage.GeneralHit,
     ["Voodoo"] = game.ReplicatedStorage.GeneralHit,
     ["Leash"] = game.ReplicatedStorage.GeneralHit,
@@ -111,6 +112,10 @@ local gloveHits = {
     ["Divebomb"] = game.ReplicatedStorage.GeneralHit,
     ["Lamp"] = game.ReplicatedStorage.GeneralHit,
     ["Pocket"] = game.ReplicatedStorage.GeneralHit,
+    ["BONK"] = game.ReplicatedStorage.GeneralHit,
+    ["Knockoff"] = game.ReplicatedStorage.GeneralHit,
+    ["Divert"] = game.ReplicatedStorage.GeneralHit,
+    ["Frostbite"] = game.ReplicatedStorage.GeneralHit,
     -----------// Glove Hit Normal Or New Glove \\-----------
     ["ZZZZZZZ"] = game.ReplicatedStorage.ZZZZZZZHit,
     ["Brick"] = game.ReplicatedStorage.BrickHit,
@@ -210,7 +215,6 @@ local gloveHits = {
     ["God's Hand"] = game.ReplicatedStorage.Godshand,
     ["Error"] = game.ReplicatedStorage.Errorhit
 }
-
     if SlapAura then return end
     if tick() - lastClickTime < SlapAuraCooldown then
         return
