@@ -78,7 +78,8 @@ local function RequireSbeve()
 	end
 	if game.Players.LocalPlayer.leaderstats.Slaps.Value >= 44000 and game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
 		fireclickdetector(workspace.Lobby["Sbeve"].ClickDetector)
-		game:GetService("ReplicatedStorage").KrakenArm:FireServer()
+		game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+
 		wait(2)
 		fireclickdetector(workspace.Lobby["Ghost"].ClickDetector)
 		for i = 1,2 do
@@ -130,11 +131,11 @@ local function teleportPlayers()
             if player ~= game.Players.LocalPlayer then
                 if player.Character:FindFirstChild("HumanoidRootPart") and player.Character.Head:FindFirstChild("UnoReverseCard") == nil and player.Character:FindFirstChild("entered") and player.Character:FindFirstChild("stevebody") == nil then
 	                OgPlace = player.Character:FindFirstChild("HumanoidRootPart").CFrame
-					Collision(false)
+					
                     player.Character:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
                     wait()
                     player.Character:FindFirstChild("HumanoidRootPart").CFrame = OgPlace
-                    Collision(true)
+                    
                 end
             end
         end
