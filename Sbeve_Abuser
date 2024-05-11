@@ -1,8 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
+
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
 
 local gui = Instance.new("ScreenGui")
@@ -62,15 +58,6 @@ B("Become Sbeve (Sbeve player)")
 B("Sbeve all Players")
 B("Invisible (Ghost)")
 
-local function Collision(Value)
-	local speaker = game.Players.LocalPlayer
-    for _, child in pairs(speaker.Character:GetDescendants()) do
-        if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
-            child.CanCollide = Value
-        end
-    end
-end
-
 local function RequireSbeve()
 	if game.Players.LocalPlayer.Character:FindFirstChild("stevebody") then 
 		game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error", Text = "You already became Sbeve!", Duration = 1})
@@ -79,7 +66,6 @@ local function RequireSbeve()
 	if game.Players.LocalPlayer.leaderstats.Slaps.Value >= 44000 and game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil then
 		fireclickdetector(workspace.Lobby["Sbeve"].ClickDetector)
 		game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
-
 		wait(2)
 		fireclickdetector(workspace.Lobby["Ghost"].ClickDetector)
 		for i = 1,2 do
@@ -109,11 +95,9 @@ local function BecomeSbeve()
             foundSbeve = true
             game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Notification!", Text = "Found a Sbeve, becoming Sbeve!", Duration = 1})
             OgPlace2 = v.Character:FindFirstChild("HumanoidRootPart").CFrame
-            Collision(false)
             v.Character:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
             wait()
             v.Character:FindFirstChild("HumanoidRootPart").CFrame = OgPlace2
-            Collision(true)
         end
     end
 
@@ -129,13 +113,14 @@ local function teleportPlayers()
     if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
         for _, player in ipairs(game.Players:GetPlayers()) do
             if player ~= game.Players.LocalPlayer then
-                if player.Character:FindFirstChild("HumanoidRootPart") and player.Character.Head:FindFirstChild("UnoReverseCard") == nil and player.Character:FindFirstChild("entered") and player.Character:FindFirstChild("stevebody") == nil then
+                if player.Character:FindFirstChild("HumanoidRootPart") and player.Character.Head:FindFirstChild("UnoReverseCard") == nil and player.Character:FindFirstChild("entered") and player.Character:FindFirstChild("stevebody") == nil and player.Character.Ragdolled.Value == false then
 	                OgPlace = player.Character:FindFirstChild("HumanoidRootPart").CFrame
-					
                     player.Character:FindFirstChild("HumanoidRootPart").CFrame = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+                    player.Character.HumanoidRootPart.CanCollide = true
                     wait()
                     player.Character:FindFirstChild("HumanoidRootPart").CFrame = OgPlace
-                    
+                 elseif v.Character:FindFirstChild("stevebody") ~= nil then
+	                player.Character.HumanoidRootPart.CanCollide = false
                 end
             end
         end
