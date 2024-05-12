@@ -1,4 +1,8 @@
-
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
 
 local gui = Instance.new("ScreenGui")
@@ -119,7 +123,7 @@ local function teleportPlayers()
                     player.Character.HumanoidRootPart.CanCollide = true
                     wait()
                     player.Character:FindFirstChild("HumanoidRootPart").CFrame = OgPlace
-                 elseif v.Character:FindFirstChild("stevebody") ~= nil then
+                 elseif player.Character:FindFirstChild("stevebody") ~= nil then
 	                player.Character.HumanoidRootPart.CanCollide = false
                 end
             end
