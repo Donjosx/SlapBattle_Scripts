@@ -1,3 +1,10 @@
+if not _G.gloveHitsDonjo then
+   game:GetService("StarterGui"):SetCore("SendNotification",{Title = "System", Text = "not Found Slap_Aura Function, creating function to start use!", Duration = 1})
+   wait(0.7)
+   loadstring(game:HttpGet(("https://raw.githubusercontent.com/Donjosx/SlapBattle_Scripts/main/GloveHitSupport")))()
+else 
+   game:GetService("StarterGui"):SetCore("SendNotification",{Title = "System", Text = "Found Slap_Aura Function, Starting script!", Duration = 1})
+end
 --/// Destroy old Gui ///--
 if game.CoreGui:FindFirstChild("SlapUi") then
 game.CoreGui:FindFirstChild("SlapUi"):Destroy()
