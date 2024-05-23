@@ -66,7 +66,7 @@ SlapButton.MouseButton1Click:Connect(function()
 			if string.find(c.Name, "Å") and c:FindFirstChild("HumanoidRootPart") then
 				local Magnitude2 = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - c.HumanoidRootPart.Position).Magnitude
 				if Magnitude2 <= Range2 then
-					gloveHits[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(c:WaitForChild("HumanoidRootPart"), true)
+					_G.gloveHitsDonjo[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(c:WaitForChild("HumanoidRootPart"), true)
 				end
 			end
 		end
