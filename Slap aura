@@ -69,8 +69,8 @@ SlapButton.MouseButton1Click:Connect(function()
 				end
 			end
 		end
-if game.Workspace:FindFirstChild("Blink_".. game.Players.LocalPlayer.Name
-                _G.gloveHits[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(workspace:FindFirstChild("Blink_".. game.Players.LocalPlayer.Name))
+if game.Workspace:FindFirstChild("Blink_".. game.Players.LocalPlayer.Name) then
+                _G.gloveHitsDonjo[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(workspace:FindFirstChild("Blink_".. game.Players.LocalPlayer.Name).Torso)
 end
     lastClickTime = tick()
     SlapAura = false
