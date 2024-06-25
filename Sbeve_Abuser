@@ -15,9 +15,11 @@ message.BackgroundColor3 = Color3.fromRGB(0,0,0)
 message.TextColor3 = Color3.fromRGB(255,0,0)
 message.TextStrokeTransparency = 0
 message.Font = Enum.Font.SourceSansBold
-message.TextSize = 24
+message.TextScaled = true
 message.Text = "IMPORTANT MESSAGE: MY YOUTUBE ACCOUNT GOT HACKED AND I AM TRYING TO GET IT BACK, PLEASE DON'T TRUST ANYTHING HE SAYS (INFORMATION NOT FROM SLAP BATTLE SCRIPTS) ALSO PLEASE SAY IT IN THE COMMENTS OF MY VIDEO FOR EVERYONE!!!"
 message.Parent = frame
+wait(15)
+screenGui:Destroy()
 
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Blah Blah Blah", Text = "Check my channel DonjoSx on YouTube if you wants more OP script!", Duration = 1})
