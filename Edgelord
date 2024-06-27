@@ -16,7 +16,7 @@ message.TextColor3 = Color3.fromRGB(255,0,0)
 message.TextStrokeTransparency = 0
 message.Font = Enum.Font.SourceSansBold
 message.TextScaled = true
-message.Text = "IMPORTANT MESSAGE: MY YOUTUBE ACCOUNT GOT HACKED AND I ALREADY LOST IT, PLEASE DON'T TRUST ANYTHING HE SAYS AND UNSUB TO HIM (INFORMATION NOT FROM SLAP BATTLE SCRIPTS) ALSO PLEASE SAY IT IN THE COMMENTS OF MY VIDEO FOR EVERYONE!!!, HE ALSO DELETED ALL SOURCE SCRIPT SO MY SCRIPT, MY GLOVES ABUSER GONE FOREVER..."
+message.Text = "My new YouTube account it's OMO-HOTA. Don't trust others DonjoSx account"
 message.Parent = frame
 wait(15)
 screenGui:Destroy()
