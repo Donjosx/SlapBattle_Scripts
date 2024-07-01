@@ -16,7 +16,7 @@ message.TextColor3 = Color3.fromRGB(255,0,0)
 message.TextStrokeTransparency = 0
 message.Font = Enum.Font.SourceSansBold
 message.TextScaled = true
-message.Text = "My new YouTube account it's OMO-HOTA. Don't trust others DonjoSx account"
+message.Text = "I got my account back(Siw gammer) and i need 8 more days to change name, he already use 2 uses change name ticket, but i lost all my script so you guy need to wait, sorry"
 message.Parent = frame
 wait(15)
 screenGui:Destroy()
